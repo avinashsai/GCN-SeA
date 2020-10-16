@@ -20,7 +20,7 @@ class WhitespaceTokenizer(object):
         spaces = [True] * len(words)
         return Doc(self.vocab, words=words, spaces=spaces)
 
-nlp = spacy.load('en',disable=['tagger','ner'],vectors=False)
+nlp = spacy.load('en_core_web_sm',disable=['tagger','ner'],vectors=False)
 nlp.tokenizer = WhitespaceTokenizer(nlp.vocab)
 
 def get_args():
